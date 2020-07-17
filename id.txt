@@ -1,0 +1,5 @@
+App ID: 73254
+
+Client ID: Iv1.df234396b67f0093
+
+Client secret: 78a2ab6b0de9cece60088242e42c058d39c91302

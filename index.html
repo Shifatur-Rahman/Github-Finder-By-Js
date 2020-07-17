@@ -17,6 +17,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script defer src="github.js"></script>
+    <script defer src="ui.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -31,7 +34,12 @@
         <p>Enter a Username to fetch a user id & repos.</p>
         <div class="form-group">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" />
+            <input
+              id="search-input"
+              type="text"
+              class="form-control"
+              placeholder="Username"
+            />
           </div>
         </div>
       </div>
