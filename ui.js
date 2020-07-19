@@ -40,6 +40,8 @@ class UI {
           </div>
         </div>
       </div>
+      <h3 class="page-heading mb-3">Latest Repos</h3>
+      <div id="repos"></div>
   `;
   }
   // clear profile
@@ -58,7 +60,32 @@ class UI {
       this.clearAlert();
     }, 3000);
   }
+  showRepos(repos) {
+    let output = "";
+    const reposOutput = document.querySelector("#repos");
+    repos.forEach((repo) => {
+      output += `
+        <div class='card card-body'>
+          <div class='row'>
+            <div class='col-md-6'>
+              <a class='md-6 href="${repo.html_url}"'>${repo.name}</a>
+            </div>
+            <div class='col-md-6'>
+              <span class='badge badge-primary'>${repo.stargazers_count}</span>
 
+              <span class='badge badge-success'>
+                Following : ${repo.open_issues_count}
+              </span>
+              <span class='badge badge-info'>
+                Followers : ${repo.forks_count}
+              </span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    reposOutput.innerHTML = output;
+  }
   clearAlert() {
     const alert = document.querySelector(".alert");
     if (alert) {
